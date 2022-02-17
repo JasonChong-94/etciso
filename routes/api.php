@@ -176,6 +176,8 @@ Route::group(['middleware' => 'token','prefix'=>'market','namespace'=>'Api\Marke
     Route::any('invoice/get','MarketCustomerController@get_invoice');
     /**发票申请列表 userid**/
     Route::any('invoice/index','MarketCustomerController@userInvoice');
+    /**剩余可开票额度**/
+    Route::any('invoice/balance','MarketCustomerController@invoiceBalance');
 
     /**客户合同**/
     Route::any('contract/index','MarketContractController@ContractIndex');
