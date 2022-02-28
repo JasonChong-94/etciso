@@ -27,6 +27,7 @@ class MarketCustomerController extends Controller
         $file = array(
             'khxx.id',
             'qymc',
+            'xydm',
             'khxx_nature.nature',
             'khxx_type.type',
             'bgdz',
@@ -73,6 +74,7 @@ class MarketCustomerController extends Controller
         $file = array(
             'khxx.id',
             'qymc',
+            'xydm',
             'khxx_nature.nature',
             'khxx_type.type',
             'bgdz',
@@ -121,6 +123,7 @@ class MarketCustomerController extends Controller
         $file = array(
             'khxx.id',
             'qymc',
+            'xydm',
             'khxx_nature.nature',
             'khxx_type.type',
             'bgdz',
