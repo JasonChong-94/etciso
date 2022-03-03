@@ -61,6 +61,7 @@ class Talent extends Model{
             'sex',
             'age',
             'telephone',
+            'type',
             'system',//注册领域
             'ready',//待考领域
             'recruit',//招聘渠道

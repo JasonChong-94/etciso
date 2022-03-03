@@ -189,6 +189,7 @@ class TalentIndexController extends Controller
         $check->name=$request->name;
         $check->sex=$request->sex;
         $check->age=$request->age;
+        $check->type=$request->type;
         $check->telephone = $request->telephone;
         $check->system = $request->system;
         $check->ready=$request->ready;
