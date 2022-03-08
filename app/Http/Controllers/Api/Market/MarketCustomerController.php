@@ -285,6 +285,9 @@ class MarketCustomerController extends Controller
             $flights->khlx  = $request->type;
             $flights->fzjg  = $request->region;
             $flights->scjl  = ';'.$request->person.';';
+            if($request->has('owner')){
+                $flights->owner  = $request->owner;
+            }
             $flights->bz    = $request->remark;
             $flights->cj_time = date('Y-m-d');
             $flights->gx_time = date('Y-m-d');
@@ -434,6 +437,9 @@ class MarketCustomerController extends Controller
     public function OwnerEdit(Request $request){
         $flights = MarketCustomer::find($request->id);
         $flights->scjl  = ';'.$request->person.';';
+        if($request->has('owner')){
+            $flights->owner  = $request->owner;
+        }
         if($flights->save()){
             return response()->json(['status'=>100,'msg'=>'修改成功','data'=>$flights]);
         }

@@ -762,5 +762,7 @@ Route::group(['prefix'=>'common','namespace'=>'Api\Common'], function () {
     Route::any('invoice/get','AmountController@get_invoice');
     /**发票申请列表 userid**/
     Route::any('invoice/index','AmountController@userInvoice');
+    /**剩余可开票额度**/
+    Route::any('invoice/balance','AmountController@invoiceBalance');
     Route::any('invoice/test','AmountController@test');
 });

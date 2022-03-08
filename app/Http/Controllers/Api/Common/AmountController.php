@@ -286,4 +286,17 @@ class AmountController extends Controller
             return response()->json(['status'=>101,'msg'=>'无记录']);
         }
     }
+    /**剩余可开票额度**/
+    public function invoiceBalance(Request $request){
+        $xydm=$request->input('xydm');
+        $to_xydm=$request->input('to_xydm');
+        if(!$xydm || !$to_xydm){
+            return response()->json(['status'=>101,'msg'=>'缺少信用代码']);
+        }
+        $res=MarketInvoiceAmount::where('xydm',$xydm)->where('to_xydm',$to_xydm)->value('amount_n');
+        if(!$res){
+            return response()->json(['status'=>101,'msg'=>'无数据']);
+        }
+        return response()->json(['status'=>100,'msg'=>'请求成功','data'=>$res]);
+    }
 }
